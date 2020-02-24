@@ -1,0 +1,87 @@
+﻿@model IEnumerable<CoachTim_1.Models.Workout>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AthleteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkoutType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkoutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkoutDistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkoutHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkoutMinutes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkoutSeconds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AverageHeartRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousNightSleepHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousNightSleepMinutes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AthleteId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkoutType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkoutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkoutDistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkoutHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkoutMinutes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkoutSeconds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AverageHeartRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousNightSleepHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousNightSleepMinutes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WorkoutId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WorkoutId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WorkoutId })
+        </td>
+    </tr>
+}
+
+</table>

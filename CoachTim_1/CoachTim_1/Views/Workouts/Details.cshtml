@@ -1,0 +1,98 @@
+﻿@model CoachTim_1.Models.Workout
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Workout</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AthleteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AthleteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutDistance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutDistance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutMinutes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutSeconds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutSeconds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AverageHeartRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AverageHeartRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousNightSleepHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousNightSleepHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousNightSleepMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousNightSleepMinutes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WorkoutId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
