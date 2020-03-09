@@ -46,10 +46,11 @@ namespace CoachTim_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "WorkoutId,AthleteId,WorkoutType,WorkoutDate,WorkoutDistance,WorkoutHours,WorkoutMinutes,WorkoutSeconds,AverageHeartRate,PreviousNightSleepHours,PreviousNightSleepMinutes")] Workout workout)
+        public ActionResult Create([Bind(Include = "WorkoutId,AthleteId,WorkoutType,WorkoutDate,WorkoutDistance,WorkoutHours,WorkoutMinutes,WorkoutSeconds,AverageHeartRate,PreviousNightSleepHours,PreviousNightSleepMinutes")] Workout workout, string workoutType)
         {
             if (ModelState.IsValid)
             {
+                workout.WorkoutType = workoutType;
                 db.Workouts.Add(workout);
                 db.SaveChanges();
                 return RedirectToAction("Index");
